@@ -19,10 +19,10 @@
                 <form class="col-sm col-md col-xl-4 d-block alig-item-center g-1">
                        
                     <label class="col-6" for="title">Titulo</label>
-                    <input class="col-6" type="text" id="title" name="title" placeholder="Titulo de la tarea..." maxlength="10">
+                    <input class="col-6" type="text" id="title" name="title" placeholder="Titulo de la tarea..." maxlength="10" autofocus>
                           
                     <label class="col-6" for="descrip">Descripción</label>
-                    <textarea class="col-6" name="descrip" id="descrip" cols="20" rows="5" placeholder="Describe la tarea..." maxlength="30"></textarea>
+                    <textarea class="col-6" name="descrip" id="descrip" cols="20" rows="5" placeholder="Describe la tarea..." maxlength="30" aria-readonly="true"></textarea>
                         
                     <div class="container">
                         <button class="btn btn-success" type="submit" class="btn-submit">New</button>
