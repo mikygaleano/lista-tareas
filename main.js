@@ -11,7 +11,11 @@ class metodos {
     newElement () {
         const divContiner = document.querySelector('.new-list');
         const pestaña = document.createElement('article');
-        pestaña.classList.add('card')
+        pestaña.classList.add('card');
+        pestaña.classList.add('text-center');
+
+
+
 
         const title = document.getElementById('title');
         const descrip = document.getElementById('descrip');
@@ -21,9 +25,11 @@ class metodos {
 
 
         pestaña.innerHTML = `
-            <span>${tarea.title}</span>
-            <p>${tarea.descrip}</p>
-            <button class="eliminar">❌</button>
+            <span class="card-title">${tarea.title}</span>
+            <p class="card-body">${tarea.descrip}</p>
+            <div class="container">
+                <button class="btn btn-warning eliminar">❌</button>
+            </div>
         `;
 
         divContiner.append(pestaña);
@@ -43,7 +49,7 @@ class metodos {
 
     removeLista (element) {
         if (element.matches('.eliminar')) {
-            element.parentElement.remove();
+            element.parentElement.parentElement.remove();
         };
     };
 
